@@ -16,15 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleImage01" translatesAutoresizingMaskIntoConstraints="NO" id="Ipe-fc-xrK">
-                                <rect key="frame" x="65.666666666666686" y="199" width="262" height="271"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrated person can get more information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-vt-Eig">
+                                <rect key="frame" x="35" y="573" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drive1" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-04-jtG">
+                                <rect key="frame" x="16" y="171" width="361" height="405"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="405" id="XVS-2T-b39"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drivers Online Magazine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8k-uG-pl3">
+                                <rect key="frame" x="45" y="171" width="303" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOA-ny-UkE">
-                                <rect key="frame" x="35" y="758.66666666666663" width="323" height="34.333333333333371"/>
+                                <rect key="frame" x="35" y="738" width="323" height="34.333333333333371"/>
                                 <color key="backgroundColor" red="0.054901964960000001" green="0.1725490093" blue="0.85490196939999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Messaging"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="20"/>
@@ -34,35 +49,33 @@
                                     <action selector="goToNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lK4-a0-Yeq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect easily with your family and friends friends over countries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-vt-Eig">
-                                <rect key="frame" x="46" y="490" width="300" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cJC-04-jtG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="1w7-Bw-d3n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GOA-ny-UkE" secondAttribute="trailing" constant="35" id="88K-Ow-xIZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipe-fc-xrK" secondAttribute="trailing" constant="65.329999999999998" id="VSr-1M-9qH"/>
-                            <constraint firstItem="Ipe-fc-xrK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="YM5-fX-hMg"/>
-                            <constraint firstItem="Ipe-fc-xrK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65.670000000000002" id="eaS-Zf-tfo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GOA-ny-UkE" secondAttribute="bottom" constant="25" id="i6l-Ks-DnS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s8k-uG-pl3" secondAttribute="trailing" constant="45" id="WI5-p9-dKp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJC-04-jtG" secondAttribute="trailing" constant="16" id="XPt-Uy-nt4"/>
+                            <constraint firstItem="s8k-uG-pl3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="ce6-r9-7JP"/>
+                            <constraint firstItem="cJC-04-jtG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eIv-ke-vMC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SAb-vt-Eig" secondAttribute="trailing" constant="58" id="fHD-cP-Pab"/>
+                            <constraint firstItem="SAb-vt-Eig" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="hf9-FA-DcQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GOA-ny-UkE" secondAttribute="bottom" constant="45.666666666666629" id="i6l-Ks-DnS"/>
+                            <constraint firstItem="s8k-uG-pl3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="kKN-nC-YgA"/>
                             <constraint firstItem="GOA-ny-UkE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="raT-Hb-6vT"/>
+                            <constraint firstItem="SAb-vt-Eig" firstAttribute="top" secondItem="cJC-04-jtG" secondAttribute="bottom" constant="-3" id="rg0-c5-CFy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lps-Qg-azE"/>
                     <connections>
                         <outlet property="messageButton" destination="GOA-ny-UkE" id="She-Ei-EOa"/>
-                        <outlet property="titleImage01" destination="Ipe-fc-xrK" id="ux0-Di-HzK"/>
                         <outlet property="titleLabel" destination="SAb-vt-Eig" id="v09-G4-j6U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="4"/>
+            <point key="canvasLocation" x="739.69465648854964" y="-104.22535211267606"/>
         </scene>
         <!--Second Page Go-->
         <scene sceneID="tsy-KI-fPb">
@@ -96,11 +109,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S62-g7-Dof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-50" y="4"/>
         </scene>
     </scenes>
     <resources>
-        <image name="titleImage01" width="262" height="271"/>
+        <image name="drive1" width="612" height="408"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

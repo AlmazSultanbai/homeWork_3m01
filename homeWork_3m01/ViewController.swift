@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.sizeToFit()
-        messageButton.setTitle("Start Messagging", for: .normal)
+        messageButton.setTitle("Register", for: .normal)
         
         
         
