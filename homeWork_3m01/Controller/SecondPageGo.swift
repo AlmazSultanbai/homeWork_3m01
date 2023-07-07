@@ -15,40 +15,32 @@ class SecondPageGo: UIViewController {
         view.text = "You are registered now!"
         view.textColor = .black
         view.font = .systemFont(ofSize: 30)
-        
-        
         return view
-        
     }()
-    
     private lazy var someImage: UIImageView = {
-        
         let view = UIImageView()
         view.image = UIImage(named: "driver2")
-        
         return view
     }()
-    
-   
     private lazy var nextButton: UIButton = {
-        
         let view = UIButton(type: .system)
         view.setTitle("Latest Driver News", for: .normal)
         view.tintColor = .white
         view.backgroundColor = .systemBlue
         
         view.layer.cornerRadius = 15
-        view.addTarget(self, action: #selector(nextBtnAction(sender: )), for: .touchUpInside)
+        view.addTarget(
+            self,
+            action: #selector(nextBtnAction(sender: )),
+            for: .touchUpInside
+        )
         return view
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         view.backgroundColor = .white
-        
         setupUI()
     }
     private func setupUI() {
@@ -64,13 +56,12 @@ class SecondPageGo: UIViewController {
             make.width.equalTo(300)
             make.height.equalTo(200)
         }
-     
+        
         view.addSubview(nextButton)
         nextButton.snp.makeConstraints{make in
             make.bottom.equalToSuperview().offset(-80)
             make.horizontalEdges.equalToSuperview().inset(30)
             make.height.equalTo(50)
-            
             make.centerX.equalToSuperview()
             
         }

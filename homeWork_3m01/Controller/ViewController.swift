@@ -16,11 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageButton: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         messageButton.tintColor = .white
         titleLabel.textColor = .black
@@ -28,19 +25,12 @@ class ViewController: UIViewController {
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.sizeToFit()
         messageButton.setTitle("Register", for: .normal)
-        
-        
-        
     }
     
   
     @IBAction func goToNextPage(_ sender: UIButton) {
         navigationController?.pushViewController(SecondPageGo(), animated: true)
-        
     }
-    
-    
-    
 }
    
 

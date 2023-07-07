@@ -49,6 +49,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C036D27D2A583A18005B1E8C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C03BEB382A459F07007E2ECB /* AppDelegate.swift */,
+				C03BEB3A2A459F07007E2ECB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C036D27E2A583A23005B1E8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C036D26D2A56A65F005B1E8C /* CustomTableViewCell.swift */,
+				C03BEB3E2A459F07007E2ECB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C036D27F2A583A30005B1E8C /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				C03BEB432A459F07007E2ECB /* LaunchScreen.storyboard */,
+				C03BEB412A459F07007E2ECB /* Assets.xcassets */,
+				C03BEB462A459F07007E2ECB /* Info.plist */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		C036D2802A583A71005B1E8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C036D2752A56B467005B1E8C /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C036D2812A583A98005B1E8C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C03BEB3C2A459F07007E2ECB /* ViewController.swift */,
+				C0337F1E2A49BFBB00373313 /* SecondPageGo.swift */,
+				C036D2732A56B0DC005B1E8C /* TableViewController.swift */,
+				C036D27B2A57EAD2005B1E8C /* SecondPageScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C03BEB2C2A459F07007E2ECB = {
 			isa = PBXGroup;
 			children = (
@@ -68,18 +115,11 @@
 		C03BEB372A459F07007E2ECB /* homeWork_3m01 */ = {
 			isa = PBXGroup;
 			children = (
-				C03BEB382A459F07007E2ECB /* AppDelegate.swift */,
-				C03BEB3A2A459F07007E2ECB /* SceneDelegate.swift */,
-				C03BEB3C2A459F07007E2ECB /* ViewController.swift */,
-				C0337F1E2A49BFBB00373313 /* SecondPageGo.swift */,
-				C036D2732A56B0DC005B1E8C /* TableViewController.swift */,
-				C036D27B2A57EAD2005B1E8C /* SecondPageScreenViewController.swift */,
-				C036D26D2A56A65F005B1E8C /* CustomTableViewCell.swift */,
-				C036D2752A56B467005B1E8C /* DataModel.swift */,
-				C03BEB432A459F07007E2ECB /* LaunchScreen.storyboard */,
-				C03BEB3E2A459F07007E2ECB /* Main.storyboard */,
-				C03BEB412A459F07007E2ECB /* Assets.xcassets */,
-				C03BEB462A459F07007E2ECB /* Info.plist */,
+				C036D27D2A583A18005B1E8C /* App */,
+				C036D2802A583A71005B1E8C /* Model */,
+				C036D2812A583A98005B1E8C /* Controller */,
+				C036D27E2A583A23005B1E8C /* View */,
+				C036D27F2A583A30005B1E8C /* Resourse */,
 			);
 			path = homeWork_3m01;
 			sourceTree = "<group>";
@@ -317,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BV2B832NGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = homeWork_3m01/Info.plist;
+				INFOPLIST_FILE = homeWork_3m01/Resourse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +385,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BV2B832NGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = homeWork_3m01/Info.plist;
+				INFOPLIST_FILE = homeWork_3m01/Resourse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
