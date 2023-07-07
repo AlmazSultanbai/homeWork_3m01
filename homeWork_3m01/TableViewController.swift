@@ -8,62 +8,66 @@
 import UIKit
 import SnapKit
 
-class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+class TableViewController: UIViewController {
     
+    private var model = SetData()
     
-    private lazy var tableView : UITableView = {
+   private lazy var tableView : UITableView = {
         let view = UITableView()
-        
         return view
-        
-    }()
+        }()
     
-    private var data: [DataModel] = [DataModel(image: UIImageView.init(image: UIImage(named: "audi")), title: "Best of Audi", descriptiion: " Audi Q7 is now best of AUDI car models of all time. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "gx2024")), title: "All New Lexus GX", descriptiion: " Lexus anounsed that they are going to show their new model on Jeneve car Show Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "lambo")), title: "Lambo Goes Crazy", descriptiion: "There are so much Labborgini fans who wants to buy it so that manufacturer doesnt have ability to manufacture all in time. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "mersE350")), title: "The best of all Times", descriptiion: " Mersedes Benz car dealers think that its model E350 2012 was the most popular of all times Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "retroCar")), title: "Very Rare", descriptiion: " There are some very rare cars thet you ivevn couldnt think Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "wrangler")), title: "Strongest Wrngler", descriptiion: " Jeep wrangler is the strogest suv in the world. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "toyotaPrado")), title: "As Good As Posible", descriptiion: " Toyota Prado as always is as good as possible. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "ferrari")), title: "Fast Ferrari", descriptiion: " This month Ferrari introdused its new fastest model to the world. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "bugatti")), title: "Bugatti", descriptiion: "Bugatti is know to the world as the most expensive car. Its made unique and modern and well build. Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "jeep")), title: "Hero returns", descriptiion: " Everything goes chat and every body can make it happen if he want it truely"),
-                                     DataModel(image: UIImageView.init(image: UIImage(named: "tesla")), title: "Electric is Good", descriptiion: "Electric cars are build very well these days so you can buy it no doubt about it Everything goes chat and every body can make it happen if he want it truely")
-    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "All News"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        view.addSubview(tableView)
+     setupUI()
+     tableViewConfig()
+       
+    }
+    
+    private func setupUI(){
+    navigationItem.title = "All News"
+    navigationController?.navigationBar.prefersLargeTitles = true
+    view.addSubview(tableView)
         tableView.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
-            
-            
         }
+        
+        }
+    
+    private func tableViewConfig(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell().idCell)
+        
     }
+    
+}
+extension TableViewController: UITableViewDataSource, UITableViewDelegate {
+    
     // отвечает за количество ячеек (строк)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        model.data.count
     }
     // отвечает за сому ячейку
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell().idCell) as?CustomTableViewCell
-        let model = data[indexPath.row]
+        let value = model.data[indexPath.row]
         
-        cell?.imageViewS = model.image
-        cell?.titleLabel.text = model.title
-        cell?.dexcriptionLabel.text = model.descriptiion
+        cell?.imageViewS = value.image
+        cell?.titleLabel.text = value.title
+        cell?.descriptionLabel.text = value.descriptiion
         return cell!
     }
 // отвечает за размер ячейки
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = SecondPageScreenViewController()
+        vc.dataModel = model.data[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

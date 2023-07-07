@@ -11,6 +11,7 @@
 		C036D26E2A56A65F005B1E8C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036D26D2A56A65F005B1E8C /* CustomTableViewCell.swift */; };
 		C036D2742A56B0DC005B1E8C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036D2732A56B0DC005B1E8C /* TableViewController.swift */; };
 		C036D2762A56B467005B1E8C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036D2752A56B467005B1E8C /* DataModel.swift */; };
+		C036D27C2A57EAD2005B1E8C /* SecondPageScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036D27B2A57EAD2005B1E8C /* SecondPageScreenViewController.swift */; };
 		C03BEB392A459F07007E2ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BEB382A459F07007E2ECB /* AppDelegate.swift */; };
 		C03BEB3B2A459F07007E2ECB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BEB3A2A459F07007E2ECB /* SceneDelegate.swift */; };
 		C03BEB3D2A459F07007E2ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BEB3C2A459F07007E2ECB /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		C036D26D2A56A65F005B1E8C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		C036D2732A56B0DC005B1E8C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C036D2752A56B467005B1E8C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		C036D27B2A57EAD2005B1E8C /* SecondPageScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageScreenViewController.swift; sourceTree = "<group>"; };
 		C03BEB352A459F07007E2ECB /* homeWork_3m01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homeWork_3m01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03BEB382A459F07007E2ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C03BEB3A2A459F07007E2ECB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				C03BEB3C2A459F07007E2ECB /* ViewController.swift */,
 				C0337F1E2A49BFBB00373313 /* SecondPageGo.swift */,
 				C036D2732A56B0DC005B1E8C /* TableViewController.swift */,
+				C036D27B2A57EAD2005B1E8C /* SecondPageScreenViewController.swift */,
 				C036D26D2A56A65F005B1E8C /* CustomTableViewCell.swift */,
 				C036D2752A56B467005B1E8C /* DataModel.swift */,
 				C03BEB432A459F07007E2ECB /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				C03BEB3D2A459F07007E2ECB /* ViewController.swift in Sources */,
 				C03BEB392A459F07007E2ECB /* AppDelegate.swift in Sources */,
 				C03BEB3B2A459F07007E2ECB /* SceneDelegate.swift in Sources */,
+				C036D27C2A57EAD2005B1E8C /* SecondPageScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

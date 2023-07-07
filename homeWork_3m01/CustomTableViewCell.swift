@@ -24,7 +24,7 @@ class CustomTableViewCell: UITableViewCell {
         return view
         
     }()
-     lazy var dexcriptionLabel: UILabel = {
+     lazy var descriptionLabel: UILabel = {
         let view = UILabel()
          view.font = .systemFont(ofSize: 15, weight: .medium)
          view.numberOfLines = 6
@@ -37,7 +37,7 @@ class CustomTableViewCell: UITableViewCell {
         self.addSubview(imageViewS)
         imageViewS.snp.makeConstraints{make in
             make.top.leading.bottom.equalToSuperview().inset(10)
-            make.width.equalTo(150)
+            make.width.equalTo(130)
         }
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {make in
@@ -45,8 +45,8 @@ class CustomTableViewCell: UITableViewCell {
             make.leading.equalTo(imageViewS.snp.trailing).offset(10)
             make.trailing.equalToSuperview().offset(-10)
         }
-        self.addSubview(dexcriptionLabel)
-        dexcriptionLabel.snp.makeConstraints {make in
+        self.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints {make in
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
             make.leading.equalTo(imageViewS.snp.trailing).offset(10)
             make.trailing.equalToSuperview().offset(-10)
